@@ -1,6 +1,7 @@
 # Workflow: GitHub + gh CLI
 
-This repo follows GitHub Flow with trunk-based development.
+This repo follows lightweight GitHub Flow and is intended to stay suitable as a
+public reusable template.
 
 ## Branching
 
@@ -27,6 +28,12 @@ pnpm build
 4. Push and open PR.
 5. Prefer **rebase merge** to preserve atomic commit history.
 
+## Template Notes
+
+- Keep GitHub process lightweight.
+- Prefer documentation updates in the same change as workflow or tooling edits.
+- Avoid adding heavy template process files unless they clearly reduce friction.
+
 ## gh CLI Commands
 
 ### Authenticate
@@ -42,6 +49,11 @@ gh auth login -h github.com
 gh repo create compass --source=. --remote=origin --push --public
 gh repo edit --template
 ```
+
+### Use this template for a new repo
+
+Create a new repository from the GitHub template UI, then clone it locally and
+continue with the standard branch and PR flow.
 
 ### Branch, push, and open PR
 
