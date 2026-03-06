@@ -8,6 +8,11 @@ This file defines Codex operating rules for this repository.
 - Do not introduce extra dependencies unless explicitly required.
 - Prefer Server Components; add `"use client"` only when required.
 - Do not add app-specific screens or product logic in the starter baseline.
+- Use pnpm only for package operations.
+- Use `pnpm dlx` instead of `npx` for one-off package commands.
+- Update the relevant docs in the same task as any repo, tooling, or workflow change.
+- When the user requests audit-only or approval-gated work, stay non-mutating
+  until they approve implementation.
 
 ## Git + Branching
 
