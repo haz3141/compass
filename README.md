@@ -6,6 +6,11 @@ It keeps the baseline intentionally small so new products can start with a
 modern stack, consistent conventions, and clean documentation without taking on
 extra product logic or tooling.
 
+## Requirements
+
+- Node.js 24.x
+- pnpm 10.30.3 via `packageManager`
+
 ## Included
 
 - Next.js App Router
@@ -32,6 +37,7 @@ extra product logic or tooling.
 ## Quick Start
 
 ```bash
+corepack enable
 pnpm install
 pnpm dev
 ```
@@ -42,6 +48,7 @@ Open `http://localhost:3000` after the dev server starts.
 
 ```bash
 pnpm dev
+pnpm check
 pnpm lint
 pnpm typecheck
 pnpm build

@@ -14,6 +14,11 @@ products can start from a clean baseline instead of a framework pile.
 - `lucide-react` for icons
 - pnpm for package management
 
+## Toolchain Baseline
+
+- Node.js 24.x via `.nvmrc` and `.node-version`
+- pnpm 10.30.3 via `package.json#packageManager`
+
 ## Starter Principles
 
 - Keep the dependency surface intentionally small.
@@ -32,8 +37,10 @@ products can start from a clean baseline instead of a framework pile.
 ## Day-1 Commands
 
 ```bash
+corepack enable
 pnpm install
 pnpm dev
+pnpm check
 pnpm lint
 pnpm typecheck
 pnpm build
