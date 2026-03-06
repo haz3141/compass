@@ -66,3 +66,6 @@ pnpm start
 This repository is intended to stay suitable as a lightweight public GitHub
 template. Keep changes minimal, production-grade, and easy to understand for
 the next app built from it.
+
+It ships with an MIT [LICENSE](LICENSE) and a lightweight pull request
+template so public-template hygiene stays clear without adding heavy process.

@@ -27,12 +27,15 @@ pnpm build
 
 4. Push and open PR.
 5. Prefer **rebase merge** to preserve atomic commit history.
+6. Use the PR template to summarize changes, checks run, and any related docs
+   updates.
 
 ## Template Notes
 
 - Keep GitHub process lightweight.
 - Prefer documentation updates in the same change as workflow or tooling edits.
 - Avoid adding heavy template process files unless they clearly reduce friction.
+- Use the lightweight PR template instead of adding heavy review process files.
 
 ## gh CLI Commands
 
