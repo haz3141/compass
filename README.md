@@ -1,6 +1,7 @@
 # Compass
 
 Compass is a minimal reusable MVP starter template for future apps.
+It is design-system-ready, but intentionally not a full design system.
 
 It keeps the baseline intentionally small so new products can start with a
 modern stack, consistent conventions, and clean documentation without taking on
@@ -18,6 +19,7 @@ extra product logic or tooling.
 - Tailwind CSS v4
 - shadcn/ui default-first setup
 - `next-themes`
+- `lucide-react`
 - pnpm
 
 ## Philosophy
@@ -26,6 +28,16 @@ extra product logic or tooling.
 - Prefer modern defaults with minimal friction.
 - Treat documentation as part of the starter.
 - Avoid adding product-specific features to the baseline.
+
+## Design System Scope
+
+- Compass is design-system-ready: semantic theme tokens, a small primitive
+  layer, and clear component boundaries are already in place.
+- Compass is not yet a full design system: generic wrappers, reusable
+  composites, and brand-layer customization stay deferred until reuse pressure
+  is real.
+- See the [Starter Playbook](docs/STARTER_PLAYBOOK.md) for token usage rules and
+  component-layer guidance.
 
 ## Intentionally Out Of Scope
 
