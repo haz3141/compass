@@ -34,6 +34,51 @@ products can start from a clean baseline instead of a framework pile.
 - No auth, database, analytics, or app-specific screens in the starter.
 - Use pnpm only for package operations.
 
+## Design System Foundation
+
+- Compass is design-system-ready, not yet a full design system.
+- The current foundation is:
+  - semantic theme tokens in `src/app/globals.css`
+  - shadcn/ui configuration in `components.json`
+  - low-level primitives in `src/components/ui`
+  - reserved `src/components/system` and `src/components/patterns` layers for
+    future reuse
+- Compass should stay minimal and generic. Do not expand the design system just
+  because more components are available.
+
+## Component Layer Boundaries
+
+- `src/components/ui`: vendored or low-level primitives. Keep these close to the
+  upstream shadcn/ui shape and use them as the base layer.
+- `src/components/system`: generic cross-cutting building blocks that improve
+  reuse without adding product meaning.
+- `src/components/patterns`: reusable composites built from primitives and
+  system components.
+- Feature-specific or product-specific UI should stay out of these shared
+  layers.
+
+## Token Usage Rules
+
+- Prefer semantic utilities such as `bg-background`, `text-foreground`,
+  `text-muted-foreground`, `border-border`, and component variants that already
+  map to the shared token set.
+- Avoid raw palette utility classes in starter and system code when a semantic
+  token already exists.
+- Keep light/dark theming driven by CSS variables. Avoid introducing
+  app-specific brand tokens in the starter baseline.
+- When in doubt, choose the smallest semantic rule that keeps future app work
+  flexible.
+
+## Deferred By Default
+
+- Stage 2 wrappers or system components such as layout helpers, field shells, or
+  page-level building blocks
+- Reusable app patterns, navigation shells, dashboards, or feature flows
+- Brand customization, showcase UI polish, or large component-library
+  expansion
+- Extra tooling such as Storybook, analytics, database setup, or process-heavy
+  governance
+
 ## Day-1 Commands
 
 ```bash
